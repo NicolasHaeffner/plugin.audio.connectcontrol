@@ -1,0 +1,24 @@
+# Addon Name: ConnectControl for Spotify
+# Addon id: plugin.audio.connectcontrol
+# Addon Provider: Halbstark
+msgid ""
+msgstr ""
+
+# Settings
+--------------------------------
+
+msgctxt "#30000"
+msgid "Acconts"
+msgstr "Accounts"
+
+msgctxt "#30001"
+msgid "username"
+msgstr "Benutzername"
+
+msgctxt "#30002"
+msgid "client_id"
+msgstr "client_id"
+
+msgctxt "#30003"
+msgid "client_secret"
+msgstr "client_secret"

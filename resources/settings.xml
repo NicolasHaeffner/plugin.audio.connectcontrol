@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="30000">
+        <setting label="30001" type="text" visible="true" id="username" default=""/>
+        <setting label="30002" type="text" visible="true" id="client_id" default=""/>
+        <setting label="30003" type="text" visible="true" id="client_secret" default=""/>
+    </category>
+</settings>
