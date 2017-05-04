@@ -36,7 +36,7 @@
                 <width>130</width>
                 <height>130</height>
                 <visible>!Control.IsVisible(1102)</visible>
-                <texturenofocus colordiffuse='grey'>CCplay.png</texturenofocus>
+                <texturenofocus colordiffuse='dimgray'>CCplay.png</texturenofocus>
                 <texturefocus>CCplay.png</texturefocus>
                 <onleft>1006</onleft>
                 <onright>1005</onright>
@@ -47,7 +47,7 @@
                 <centertop>50%</centertop>
                 <width>130</width>
                 <height>130</height>
-                <texturenofocus colordiffuse='grey'>CCpause.png</texturenofocus>
+                <texturenofocus colordiffuse='dimgray'>CCpause.png</texturenofocus>
                 <texturefocus>CCpause.png</texturefocus>
                 <onleft>1006</onleft>
                 <onright>1005</onright>
@@ -59,7 +59,7 @@
                 <width>70</width>
                 <height>70</height>
                 <visible>true</visible>
-                <texturenofocus colordiffuse='grey'>CCnext.png</texturenofocus>
+                <texturenofocus colordiffuse='dimgray'>CCnext.png</texturenofocus>
                 <texturefocus>CCnext.png</texturefocus>
                 <onleft>1101</onleft>
                 <onright>1007</onright>
@@ -71,7 +71,7 @@
                 <width>70</width>
                 <height>70</height>
                 <visible>true</visible>
-                <texturenofocus colordiffuse='grey'>CCprevious.png</texturenofocus>
+                <texturenofocus colordiffuse='dimgray'>CCprevious.png</texturenofocus>
                 <texturefocus>CCprevious.png</texturefocus>
                 <onleft>1008</onleft>
                 <onright>1004</onright>
@@ -87,7 +87,7 @@
                     <description>Repeat All</description>
                     <width>50</width>
                     <height>50</height>
-                    <texturenofocus colordiffuse='grey'>CCrepeat-all.png</texturenofocus>
+                    <texturenofocus colordiffuse='dimgray'>CCrepeat-all.png</texturenofocus>
                     <texturefocus>CCrepeat-all.png</texturefocus>
                     <onleft>1005</onleft>
                     <onright>1011</onright>
@@ -96,7 +96,7 @@
                     <description>Repeat One</description>
                     <width>50</width>
                     <height>50</height>
-                    <texturenofocus colordiffuse='grey'>CCrepeat-one.png</texturenofocus>
+                    <texturenofocus colordiffuse='dimgray'>CCrepeat-one.png</texturenofocus>
                     <texturefocus>CCrepeat-one.png</texturefocus>
                     <onleft>1005</onleft>
                     <onright>1011</onright>
@@ -105,7 +105,7 @@
                     <description>Repeat Off</description>
                     <width>50</width>
                     <height>50</height>
-                    <texturenofocus colordiffuse='grey'>CCrepeat-off.png</texturenofocus>
+                    <texturenofocus colordiffuse='dimgray'>CCrepeat-off.png</texturenofocus>
                     <texturefocus>CCrepeat-off.png</texturefocus>
                     <onleft>1005</onleft>
                     <onright>1011</onright>
@@ -122,9 +122,9 @@
                 <visible>true</visible>
                 <texturenofocus colordiffuse='gray'>none</texturenofocus>
                 <texturefocus>none</texturefocus>
-                <textureradiooffnofocus colordiffuse='grey'>CCrandom-off.png</textureradiooffnofocus>
+                <textureradiooffnofocus colordiffuse='dimgray'>CCrandom-off.png</textureradiooffnofocus>
                 <textureradioofffocus>CCrandom-off.png</textureradioofffocus>
-                <textureradioonnofocus colordiffuse='grey'>CCrandom-on.png</textureradioonnofocus>
+                <textureradioonnofocus colordiffuse='dimgray'>CCrandom-on.png</textureradioonnofocus>
                 <textureradioonfocus>CCrandom-on.png</textureradioonfocus>
                 <onright>1006</onright>
                 <onleft>1009</onleft>
@@ -140,9 +140,9 @@
                 <visible>true</visible>
                 <texturenofocus colordiffuse='gray'>none</texturenofocus>
                 <texturefocus>none</texturefocus>
-                <textureradiooffnofocus colordiffuse='grey'>CCplus.png</textureradiooffnofocus>
+                <textureradiooffnofocus colordiffuse='dimgray'>CCplus.png</textureradiooffnofocus>
                 <textureradioofffocus>CCplus.png</textureradioofffocus>
-                <textureradioonnofocus colordiffuse='grey'>CCcheckmark.png</textureradioonnofocus>
+                <textureradioonnofocus colordiffuse='dimgray'>CCcheckmark.png</textureradioonnofocus>
                 <textureradioonfocus>CCcheckmark.png</textureradioonfocus>
                 <onright>1008</onright>
             </control>
@@ -160,7 +160,7 @@
                     <width>30</width>
                     <height>30</height>
                     <visible>true</visible>
-                    <texturenofocus colordiffuse='grey'>CCconnect.png</texturenofocus>
+                    <texturenofocus colordiffuse='dimgray'>CCconnect.png</texturenofocus>
                     <texturefocus>CCconnect.png</texturefocus>
                     <onleft>1007</onleft>
                     <onright>1012</onright>
