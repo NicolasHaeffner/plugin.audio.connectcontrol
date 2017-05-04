@@ -164,7 +164,7 @@ if __name__ == '__main__':
         sp = spotipyControl.SpotipyControl(auth=token)
 
         # create the GUI
-        gui = Main("connectcontrol-main.xml", addonpath)
+        gui = Main("connectcontrol-main.xml", addonpath, 'Default', '1080p')
 
         # create and start a separate thread for the looping process that updates the window
         t1 = Thread(target=updateWindow, args=("thread 1", gui))
