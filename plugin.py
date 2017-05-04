@@ -62,7 +62,7 @@ class Main(xbmcgui.WindowXML):
 
     def onAction(self, action):
         if action.getId() == 79:
-            self.togglePlayState()
+            self.togglePlayPause()
         elif action.getId() == 92:
             self.close()
 
