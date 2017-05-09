@@ -114,6 +114,7 @@ class Main(xbmcgui.WindowXML):
         self.togglePlayPause(track['is_playing'])
         self.shuffle.setSelected(track['shuffle_state'])
         self.win.setProperty('device', track['device']['name'])
+        self.inLib.setSelected(sp.current_user_saved_tracks_contains([track['item']['uri']])[0])
 
     def setProgress(self, progress_ms, duration_ms):
         progress = (100 * progress_ms) / duration_ms
