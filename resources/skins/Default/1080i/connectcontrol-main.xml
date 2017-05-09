@@ -11,6 +11,16 @@
             <visible>true</visible>
             <fadetime>500</fadetime>
         </control>
+        <control type="image" id="1100">
+            <description>Background Playback</description>
+            <bottom>0</bottom>
+            <left>0</left>
+            <width>1920</width>
+            <height>180</height>
+            <visible>true</visible>
+            <texture>CCblack.png</texture>
+            <colordiffuse>80FFFFFF</colordiffuse>
+        </control>
         <control type="image" id="1002">
             <description>Cover</description>
             <centerleft>25%</centerleft>
