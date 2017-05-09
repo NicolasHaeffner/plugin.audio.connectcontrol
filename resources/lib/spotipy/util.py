@@ -68,7 +68,7 @@ def prompt_for_user_token(username, cachepath=None, scope=None, client_id=None,
             webbrowser.open(auth_url)
             print("Opened %s in your browser" % auth_url)
         except:
-            print("Please navigate here: %s" % auth_url)
+            print("ConnectControl: Please navigate here: %s" % auth_url)
 
         while not params:
             print('wait for token')
