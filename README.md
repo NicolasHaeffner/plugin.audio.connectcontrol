@@ -18,7 +18,7 @@ You have to register your own App at Spotify:
 2. Chose a Application Name and a Application Description (can be something random)
 3. The redirect URI depends, on whether you have a webbrowser installed on your system or not.
   * if you have a webbrowser installed, fill `http://localhost:12345/`.
-  * if no webbrowser installed you have to use the (local) IP of your Kodi device instead of localhost.
+  * if no webbrowser installed you have to use the (local) IP of your Kodi device instead of localhost. So `http://IP.OF.KODI:12345/`
 4. Note down Client ID and Client Secret, you will need them later
 
 ### First Start
@@ -29,7 +29,7 @@ You have to register your own App at Spotify:
   * If you don't have a browser available (for instance on libreelec) you have to do some more work:
     1. activate the debug log.
     2. run the addon.
-    3. open the debug log and search for this: ´ConnectControl: Please navigate here:´ open this url on another device.
+    3. open the debug log and search for this: `ConnectControl: Please navigate here:` open this url on another device.
     4. login to spotify
     5. you should see a message stating 'You may close the browser now!'
     6. the addon should work like intended.
