@@ -41,7 +41,7 @@ class TokenHandler(BaseHTTPRequestHandler):
 
 def prompt_for_user_token(username, cachepath=None, scope=None, client_id=None,
                           client_secret=None, redirect_uri=None):
-    redirect_uri = 'http://localhost:12345/'
+    # redirect_uri = 'http://localhost:12345/'
     scope = 'playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-follow-modify user-follow-read user-library-read user-library-modify user-read-private user-read-email user-read-birthdate user-top-read'
     if not cachepath:
         cachepath = ".cache-" + username

@@ -18,6 +18,7 @@ cachepath = xbmc.translatePath(u"special://profile/addon_data/%s/" % (addon_id,)
 username = addon.getSetting('username')
 client_id = addon.getSetting('client_id')
 client_secret = addon.getSetting('client_secret')
+redirect_uri = addon.getSetting('redirect_uri')
 
 # Worker Thread that checks the server for changes
 windowopen = True   # global used to tell the worker thread the status of the window
@@ -162,7 +163,7 @@ if __name__ == '__main__':
         os.makedirs(cachepath)
 
     # get token
-    token = util.prompt_for_user_token(username, cachepath, client_id=client_id, client_secret=client_secret)
+    token = util.prompt_for_user_token(username, cachepath, client_id=client_id, client_secret=client_secret, redirect_uri=redirect_uri)
     if token:
         sp = spotipyControl.SpotipyControl(auth=token)
 

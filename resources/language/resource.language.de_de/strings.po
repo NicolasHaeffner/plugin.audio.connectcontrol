@@ -22,3 +22,7 @@ msgstr "client_id"
 msgctxt "#30003"
 msgid "client_secret"
 msgstr "client_secret"
+
+msgctxt "#30004"
+msgid "redirect_uri"
+msgstr "redirect_uri"
