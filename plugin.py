@@ -99,7 +99,9 @@ class Main(xbmcgui.WindowXML):
             elif sp.current_user_saved_tracks_contains([track['item']['uri']])[0] is True:
                 sp.current_user_saved_tracks_delete([track['item']['uri']])
         if controlID == 1011:
-            sp.put_player(helpers.chooseDevice(sp.get_devices()['devices']))
+            self.device = helpers.chooseDevice(sp.get_devices()['devices'])
+            if self.device:
+                sp.put_player(self.device)
 
     def onUpdate(self, track):
         coverurl = track['item']['album']['images'][0]['url']

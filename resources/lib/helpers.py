@@ -45,4 +45,7 @@ def chooseDevice(devices):
         names.append(val['name'])
     dialog = xbmcgui.Dialog()
     ret = dialog.select('Choose a Device', names)
-    return devices[ret]['id']
+    if ret == -1:
+        return False
+    else:
+        return devices[ret]['id']
