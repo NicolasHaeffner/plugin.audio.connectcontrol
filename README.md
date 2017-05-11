@@ -4,6 +4,11 @@ This addon provides a control frontend in Kodi for any kind of Spotify Connect e
 
 It is currently under development, so don't expect everything to work
 
+## Screenshots
+
+![alt text](https://picload.org/image/rcwpgiil/connectcontrol1.png)
+![alt text](https://picload.org/image/rcwpgiii/connectcontrol2.png)
+
 ## Testing
 
 if you want to test this addon, feel free to do so.
