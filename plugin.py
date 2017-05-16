@@ -60,6 +60,8 @@ class Main(xbmcgui.WindowXML):
         self.repeat_one = self.getControl(1202)
         self.repeat_off = self.getControl(1203)
         self.volume_button = self.getControl(1011)
+        # self.sidebar = self.getControl(9001)
+        # self.sidebar.addItems(['Now Playing', "Playlists"])
 
     def onAction(self, action):
         if action.getId() == 79:

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <defaultcontrol>1102</defaultcontrol>>
+    <defaultcontrol>1102</defaultcontrol>
     <controls>
         <control type="image" id="1001">
             <description>Background</description>
@@ -21,14 +21,84 @@
             <texture>CCblack.png</texture>
             <colordiffuse>80FFFFFF</colordiffuse>
         </control>
-        <control type="image" id="1002">
-            <description>Cover</description>
-            <centerleft>25%</centerleft>
-            <top>140</top>
-            <width>600</width>
-            <height>600</height>
+<!-- Now Playing Group! -->
+        <control type="group" id="0001">
+            <description>now playing</description>
             <visible>true</visible>
-            <fadetime>200</fadetime>
+            <control type="image" id="1002">
+                <description>Cover</description>
+                <centerleft>25%</centerleft>
+                <top>140</top>
+                <width>600</width>
+                <height>600</height>
+                <visible>true</visible>
+                <animation effect="slide" end="-800" time="150" condition="!ControlGroup(1003).HasFocus()">Conditional</animation>
+                <animation effect="slide" end="0" time="150" condition="ControlGroup(1003).HasFocus()">Conditional</animation>
+                <fadetime>200</fadetime>
+            </control>
+            <control type="group" id="2000">
+                <description>lables</description>
+                <left>50%</left>
+                <top>140</top>
+                <width>1000</width>
+                <height>600</height>
+                <animation effect="slide" end="1000" time="150" condition="!ControlGroup(1003).HasFocus()">Conditional</animation>
+                <animation effect="slide" end="0" time="150" condition="ControlGroup(1003).HasFocus()">Conditional</animation>
+                <visible>true</visible>
+                <control type="label" id='2001'>
+                    <description>Title</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>100%</width>
+                    <height>70</height>
+                    <font>font_clock</font>
+                    <aligny>left</aligny>
+                    <selectedcolor>green</selectedcolor>
+                    <align>left</align>
+                    <label>$INFO[Window(10001).Property(title)]</label>
+                </control>
+                <control type="label" id='2002'>
+                    <description>Artist</description>
+                    <left>0</left>
+                    <top>100</top>
+                    <width>100%</width>
+                    <height>45</height>
+                    <font>font45</font>
+                    <aligny>left</aligny>
+                    <selectedcolor>green</selectedcolor>
+                    <align>left</align>
+                    <label>$INFO[Window(10001).Property(artist)]</label>
+                </control>
+                <control type="label" id='2003'>
+                    <description>Album</description>
+                    <left>0</left>
+                    <top>175</top>
+                    <width>100%</width>
+                    <height>27</height>
+                    <font>font27</font>
+                    <aligny>left</aligny>
+                    <selectedcolor>green</selectedcolor>
+                    <align>left</align>
+                    <label>$INFO[Window(10001).Property(album)]</label>
+                </control>
+            </control>
+        </control>
+        <control type="group" id="0002">
+            <description>browse</description>
+            <visible>true</visible>
+            <control type="button" id="5000">
+                <description>Next</description>
+                <centerright>40%</centerright>
+                <centertop>50%</centertop>
+                <width>70</width>
+                <height>70</height>
+                <visible>true</visible>
+                <animation effect="fade" time="50">Unfocus</animation>
+                <animation effect="fade" time="50">Focus</animation>
+                <texturenofocus colordiffuse='dimgray'>CCnext.png</texturenofocus>
+                <texturefocus>CCnext.png</texturefocus>
+                <ondown>1003</ondown>
+            </control>
         </control>
         <control type="group" id="1003">
             <description>playback control</description>
@@ -50,6 +120,7 @@
                 <texturefocus>CCplay.png</texturefocus>
                 <onleft>1006</onleft>
                 <onright>1005</onright>
+                <onup>5000</onup>
             </control>
             <control type="button" id="1102">
                 <description>Pause</description>
@@ -155,6 +226,7 @@
                 <textureradioonnofocus colordiffuse='dimgray'>CCcheckmark.png</textureradioonnofocus>
                 <textureradioonfocus>CCcheckmark.png</textureradioonfocus>
                 <onright>1008</onright>
+                <onleft>9001</onleft>
             </control>
             <control type="group" id="1010">
                 <description>volume</description>
@@ -175,81 +247,6 @@
                     <onleft>1007</onleft>
                     <onright>1012</onright>
                 </control>
-<!--                 <control type="label" id = "2006">
-                    <description>Device</description>
-                    <right>0</right>
-                    <top>50%</top>
-                    <width>100</width>
-                    <height>27</height>
-                    <font>font27</font>
-                    <aligny>left</aligny>
-                    <selectedcolor>green</selectedcolor>
-                    <align>left</align>
-                    <label>$INFO[Window(10001).Property(device)]</label>
-                </control> -->
-<!--             </control> -->
-<!--                 <control type="slider" id="1012">
-                    <description>Volumeslider</description>
-                    <centerright>0</centerright>
-                    <centertop>50%</centertop>
-                    <width>200</width>
-                    <height>5</height>
-                    <visible>true</visible>
-                    <texturesliderbar>volumeslider/background.png</texturesliderbar>
-                    <textureslidernib>volumeslider/nub_bar.png</textureslidernib>
-                    <textureslidernibfocus>volumeslider/nib_focus.png</textureslidernibfocus>
-                    <info></info>
-                    <action></action>
-                    <controloffsetx></controloffsetx>
-                    <controloffsety></controloffsety>
-                    <pulseonselect></pulseonselect>
-                    <orientation>horizontal</orientation>
-                    <onleft>1011</onleft>
-                </control> -->
-            </control>
-        </control>
-        <control type="group" id="2000">
-            <description>lables</description>
-            <left>50%</left>
-            <top>140</top>
-            <width>1000</width>
-            <height>600</height>
-            <visible>true</visible>
-            <control type="label" id='2001'>
-                <description>Title</description>
-                <left>0</left>
-                <top>0</top>
-                <width>100%</width>
-                <height>70</height>
-                <font>font_clock</font>
-                <aligny>left</aligny>
-                <selectedcolor>green</selectedcolor>
-                <align>left</align>
-                <label>$INFO[Window(10001).Property(title)]</label>
-            </control>
-            <control type="label" id='2002'>
-                <description>Artist</description>
-                <left>0</left>
-                <top>100</top>
-                <width>100%</width>
-                <height>45</height>
-                <font>font45</font>
-                <aligny>left</aligny>
-                <selectedcolor>green</selectedcolor>
-                <align>left</align>
-                <label>$INFO[Window(10001).Property(artist)]</label>
-            </control>
-            <control type="label" id='2003'>
-                <description>Album</description>
-                <left>0</left>
-                <top>175</top>
-                <width>100%</width>
-                <height>27</height>
-                <font>font27</font>
-                <aligny>left</aligny>
-                <selectedcolor>green</selectedcolor>
-                <align>left</align>
-                <label>$INFO[Window(10001).Property(album)]</label>
             </control>
         </control>
         <control type="progress" id="3001">
@@ -289,5 +286,89 @@
             <align>right</align>
             <label>$INFO[Window(10001).Property(remainingTime)]</label>
         </control>
+<!--         <control type="group" id="9000">
+            <description>Sidebar</description>
+            <left>-450</left>
+            <top>0</top>
+            <width>500</width>
+            <height>1080</height>
+            <defaultcontrol>1011</defaultcontrol>
+            <onright>1010</onright>
+            <visible>true</visible>
+            <animation effect="slide" end="450" time="200">Focus</animation>
+            <animation effect="slide" start="450" time="200">Unfocus</animation>
+            <control type="image" id="1013">
+                <left>0</left>
+                <top>0</top>
+                <width>400</width>
+                <height>1080</height>
+                <visible>true</visible>
+                <texture>lists/panel-mediamenu.png</texture>
+                <colordiffuse>FAFFFFFF</colordiffuse>
+            </control>
+            <control type="list" id="9001">
+                <left>0</left>
+                <top>0</top>
+                <width>500</width>
+                <height>1080</height>
+                <visible>true</visible>
+                <onup></onup>
+                <ondown></ondown>
+                <onleft></onleft>
+                <onright>1010</onright>
+                <orientation>vertical</orientation>
+                <pagecontrol>25</pagecontrol>
+                <scrolltime tween="sine" easing="out">300</scrolltime>
+                <autoscroll>false</autoscroll>
+                <itemlayout height="70">
+                    <control type="label">
+                        <left>60</left>
+                        <top>5</top>
+                        <width>800</width>
+                        <height>30</height>
+                        <font>font12</font>
+                        <aligny>center</aligny>
+                        <selectedcolor>green</selectedcolor>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="70">
+                    <control type="image">
+                          <width>350</width>
+                          <height>70</height>
+                          <left>0</left>
+                          <top>0</top>
+                          <visible>Control.HasFocus(9001)</visible>
+                          <texture>lists/list-focus.png</texture>
+                    </control>
+                    <control type="label">
+                          <left>60</left>
+                          <top>5</top>
+                          <width>800</width>
+                          <height>30</height>
+                          <font>font12</font>
+                          <aligny>center</aligny>
+                          <selectedcolor>green</selectedcolor>
+                          <align>left</align>
+                          <textcolor>black</textcolor>
+                          <visible>Control.HasFocus(9001)</visible>
+                          <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                          <left>60</left>
+                          <top>5</top>
+                          <width>800</width>
+                          <height>30</height>
+                          <font>font12</font>
+                          <aligny>center</aligny>
+                          <selectedcolor>green</selectedcolor>
+                          <align>left</align>
+                          <visible>!Control.HasFocus(9001)</visible>
+                          <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control> -->
     </controls>
 </window>
