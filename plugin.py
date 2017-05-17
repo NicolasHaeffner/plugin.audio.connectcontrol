@@ -162,25 +162,29 @@ if __name__ == '__main__':
         xbmc.log('Creating directory for cache:' + cachepath)
         os.makedirs(cachepath)
 
-    # get token
-    token = util.prompt_for_user_token(username, cachepath, client_id=client_id, client_secret=client_secret, redirect_uri=redirect_uri)
-    if token:
-        sp = spotipyControl.SpotipyControl(auth=token)
-
-        # create the GUI
-        gui = Main("connectcontrol-main.xml", addonpath, 'Default', '1080p')
-
-        # create and start a separate thread for the looping process that updates the window
-        t1 = Thread(target=updateWindow, args=("thread 1", gui))
-        t1.setDaemon(True)
-
-        # run everything
-        t1.start()
-        gui.doModal()
-
-        # delete the gui and the worker thread
-        windowopen = False
-        del gui
-        del t1
+    # check for settings
+    if not username or not client_id or not client_secret or not redirect_uri:
+        addon.openSettings()
     else:
-        xbmc.log('Can\'t get token for ' + username)
+        # get token
+        token = util.prompt_for_user_token(username, cachepath, client_id=client_id, client_secret=client_secret, redirect_uri=redirect_uri)
+        if token:
+            sp = spotipyControl.SpotipyControl(auth=token)
+
+            # create the GUI
+            gui = Main("connectcontrol-main.xml", addonpath, 'Default', '1080p')
+
+            # create and start a separate thread for the looping process that updates the window
+            t1 = Thread(target=updateWindow, args=("thread 1", gui))
+            t1.setDaemon(True)
+
+            # run everything
+            t1.start()
+            gui.doModal()
+
+            # delete the gui and the worker thread
+            windowopen = False
+            del gui
+            del t1
+        else:
+            xbmc.log('Can\'t get token for ' + username)
