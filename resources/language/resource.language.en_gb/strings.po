@@ -24,5 +24,9 @@ msgid "client_secret"
 msgstr "client_secret"
 
 msgctxt "#30004"
-msgid "redirect_uri"
-msgstr "redirect_uri"
+msgid "ipadress"
+msgstr "ipadress"
+
+msgctxt "#30005"
+msgid "port"
+msgstr "port"

@@ -4,6 +4,7 @@
         <setting label="30001" type="text" visible="true" id="username" default=""/>
         <setting label="30002" type="text" visible="true" id="client_id" default=""/>
         <setting label="30003" type="text" visible="true" id="client_secret" default=""/>
-        <setting label="30004" type="text" visible="true" id="redirect_uri" default="http://localhost:12345/"/>
+        <setting label="30004" type="text" visible="true" id="ipaddress" default="localhost"/>
+        <setting label="30005" type="number" visible="true" id="port" default="12345"/>
     </category>
 </settings>

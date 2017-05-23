@@ -40,8 +40,10 @@ class TokenHandler(BaseHTTPRequestHandler):
 
 
 def prompt_for_user_token(username, cachepath=None, scope=None, client_id=None,
-                          client_secret=None, redirect_uri=None):
+                          client_secret=None, ip=None, port=None):
     # redirect_uri = 'http://localhost:12345/'
+    redirect_uri = 'http://' + ip + ':' + port + '/'
+    print('ConnectControl: the redirect uri is:' + redirect_uri)
     scope = 'user-read-playback-state user-modify-playback-state playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-follow-modify user-follow-read user-library-read user-library-modify user-read-private user-read-email user-read-birthdate user-top-read'
     if not cachepath:
         cachepath = ".cache-" + username
@@ -58,20 +60,20 @@ def prompt_for_user_token(username, cachepath=None, scope=None, client_id=None,
 
     if not token_info:
 
-        server = HTTPServer(('localhost', 12345), TokenHandler)
+        server = HTTPServer((ip, int(port)), TokenHandler)
         t = threading.Thread(target=server.handle_request)
         t.deamon = True
         t.start()
 
         auth_url = sp_oauth.get_authorize_url()
-        try:
+        if ip == 'localhost':
             webbrowser.open(auth_url)
             print("Opened %s in your browser" % auth_url)
-        except:
+        else:
             print("ConnectControl: Please navigate here: %s" % auth_url)
 
         while not params:
-            print('wait for token')
+            print('ConnectControl: wait for token')
             sleep(1)
 
         token_info = sp_oauth.get_access_token(params['code'])
