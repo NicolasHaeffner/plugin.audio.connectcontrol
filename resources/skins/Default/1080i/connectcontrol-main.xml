@@ -30,6 +30,7 @@
             <visible>true</visible>
             <fadetime>200</fadetime>
         </control>
+        <!-- Playback Control -->
         <control type="group" id="1003">
             <description>playback control</description>
             <centerleft>50%</centerleft>
@@ -39,7 +40,8 @@
             <defaultcontrol>1004</defaultcontrol>
             <visible>true</visible>
             <onleft>1010</onleft>
-            <control type="button" id="1101">
+            <!-- Play -->
+            <control type="button" id="1101"> 
                 <description>Play</description>
                 <centerright>50%</centerright>
                 <centertop>50%</centertop>
@@ -51,6 +53,7 @@
                 <onleft>1006</onleft>
                 <onright>1005</onright>
             </control>
+            <!-- Pause -->
             <control type="button" id="1102">
                 <description>Pause</description>
                 <centerright>50%</centerright>
@@ -62,6 +65,7 @@
                 <onleft>1006</onleft>
                 <onright>1005</onright>
             </control>
+            <!-- Next -->
             <control type="button" id="1005">
                 <description>Next</description>
                 <centerright>40%</centerright>
@@ -74,6 +78,7 @@
                 <onleft>1101</onleft>
                 <onright>1007</onright>
             </control>
+            <!-- Previous -->
             <control type="button" id="1006">
                 <description>Previous</description>
                 <centerleft>40%</centerleft>
@@ -86,6 +91,7 @@
                 <onleft>1008</onleft>
                 <onright>1004</onright>
             </control>
+            <!-- Repeat -->
             <control type="group" id="1200">
                 <description>Repeat</description>
                 <centerright>30%</centerright>
@@ -121,9 +127,10 @@
                     <onright>1011</onright>
                 </control>
             </control>
+            <!-- Shuffle -->
             <control type="radiobutton" id="1008">
                 <description>Shuffle</description>
-                <centerleft>30%</centerleft>
+                <centerleft>0%</centerleft>
                 <centertop>50%</centertop>
                 <width>50</width>
                 <height>50</height>
@@ -139,6 +146,7 @@
                 <onright>1006</onright>
                 <onleft>1009</onleft>
             </control>
+            <!-- In Library -->
             <control type="radiobutton" id="1009">
                 <description>In Library</description>
                 <centerleft>5%</centerleft>
@@ -156,6 +164,7 @@
                 <textureradioonfocus>CCcheckmark.png</textureradioonfocus>
                 <onright>1008</onright>
             </control>
+            <!-- Connect Device -->
             <control type="group" id="1010">
                 <description>volume</description>
                 <centerright>5%</centerright>
@@ -175,39 +184,9 @@
                     <onleft>1007</onleft>
                     <onright>1012</onright>
                 </control>
-<!--                 <control type="label" id = "2006">
-                    <description>Device</description>
-                    <right>0</right>
-                    <top>50%</top>
-                    <width>100</width>
-                    <height>27</height>
-                    <font>font27</font>
-                    <aligny>left</aligny>
-                    <selectedcolor>green</selectedcolor>
-                    <align>left</align>
-                    <label>$INFO[Window(10001).Property(device)]</label>
-                </control> -->
-<!--             </control> -->
-<!--                 <control type="slider" id="1012">
-                    <description>Volumeslider</description>
-                    <centerright>0</centerright>
-                    <centertop>50%</centertop>
-                    <width>200</width>
-                    <height>5</height>
-                    <visible>true</visible>
-                    <texturesliderbar>volumeslider/background.png</texturesliderbar>
-                    <textureslidernib>volumeslider/nub_bar.png</textureslidernib>
-                    <textureslidernibfocus>volumeslider/nib_focus.png</textureslidernibfocus>
-                    <info></info>
-                    <action></action>
-                    <controloffsetx></controloffsetx>
-                    <controloffsety></controloffsety>
-                    <pulseonselect></pulseonselect>
-                    <orientation>horizontal</orientation>
-                    <onleft>1011</onleft>
-                </control> -->
             </control>
         </control>
+        <!-- Labels -->
         <control type="group" id="2000">
             <description>lables</description>
             <left>50%</left>
@@ -220,8 +199,9 @@
                 <left>0</left>
                 <top>0</top>
                 <width>100%</width>
-                <height>70</height>
-                <font>font_clock</font>
+                <height>80</height>
+                <font>spot80</font>
+                <textcolor>white</textcolor>
                 <aligny>left</aligny>
                 <selectedcolor>green</selectedcolor>
                 <align>left</align>
@@ -232,8 +212,9 @@
                 <left>0</left>
                 <top>100</top>
                 <width>100%</width>
-                <height>45</height>
-                <font>font45</font>
+                <height>40</height>
+                <font>spot40</font>
+                <textcolor>white</textcolor>
                 <aligny>left</aligny>
                 <selectedcolor>green</selectedcolor>
                 <align>left</align>
@@ -244,14 +225,17 @@
                 <left>0</left>
                 <top>175</top>
                 <width>100%</width>
-                <height>27</height>
-                <font>font27</font>
+                <height>40</height>
+                <font>spot40</font>
+                <textcolor>white</textcolor>
                 <aligny>left</aligny>
+                <color>white</color>
                 <selectedcolor>green</selectedcolor>
                 <align>left</align>
                 <label>$INFO[Window(10001).Property(album)]</label>
             </control>
         </control>
+        <!-- Progressbar -->
         <control type="progress" id="3001">
             <description>Progressbar</description>
             <left>0</left>
@@ -265,25 +249,29 @@
             <midtexture>progress/CCnub_bar.png</midtexture>
             <righttexture border="3">progress/CCtexturebg_darkgrey.png</righttexture>
         </control>
+        <!-- remaining Time -->
         <control type="label" id='2004'>
             <description>remaining Time</description>
             <left>20</left>
             <top>920</top>
             <width>100</width>
             <height>27</height>
-            <font>font27</font>
+            <font>spot20</font>
+            <textcolor>white</textcolor>
             <aligny>left</aligny>
             <selectedcolor>green</selectedcolor>
             <align>left</align>
             <label>$INFO[Window(10001).Property(progressTime)]</label>
         </control>
+        <!-- Progress -->
         <control type="label" id='2005'>
             <description>Progress</description>
             <right>20</right>
             <top>920</top>
             <width>100</width>
             <height>27</height>
-            <font>font27</font>
+            <font>spot20</font>
+            <textcolor>white</textcolor>
             <aligny>right</aligny>
             <selectedcolor>green</selectedcolor>
             <align>right</align>
