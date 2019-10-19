@@ -41,3 +41,46 @@ You have to register your own App at Spotify:
 3. Enjoy :)
 
 Make sure that you have a Spotify Programm running somewhere.
+
+
+## Fonts
+
+Right now the fonts are off out of the box, because there is no way to define a font from a addon. You have to "inject" them into the Fonts.xml of your skin like so: 
+
+```xml
+<!-- spotify-connect inject -->
+
+        <font>
+            <name>spot80</name>
+            <filename>RobotoCondensed-Light.ttf</filename>
+            <size>80</size>
+        </font>
+        <font>
+            <name>spot60</name>
+            <filename>RobotoCondensed-Light.ttf</filename>
+            <size>60</size>
+        </font>
+        <font>
+            <name>spot40</name>
+            <filename>RobotoCondensed-Light.ttf</filename>
+            <size>40</size>
+        </font>
+        <font>
+            <name>spot30</name>
+            <filename>RobotoCondensed-Light.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
+            <name>spot20</name>
+            <filename>RobotoCondensed-Light.ttf</filename>
+            <size>20</size>
+        </font>
+  
+<!-- spotify-connect inject end-->
+```
+
+
+
+# ToDO
+
+- [ ] Script to inject custom Font into used skin 
