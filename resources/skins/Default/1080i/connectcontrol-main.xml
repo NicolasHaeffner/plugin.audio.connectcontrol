@@ -130,8 +130,9 @@
             <!-- Shuffle -->
             <control type="radiobutton" id="1008">
                 <description>Shuffle</description>
-                <centerleft>0%</centerleft>
+                <centerleft>30%</centerleft>
                 <centertop>50%</centertop>
+                <radioposx>0</radioposx>
                 <width>50</width>
                 <height>50</height>
                 <radiowidth>50</radiowidth>
@@ -151,6 +152,7 @@
                 <description>In Library</description>
                 <centerleft>5%</centerleft>
                 <centertop>50%</centertop>
+                <radioposx>0</radioposx>
                 <width>30</width>
                 <height>30</height>
                 <radiowidth>30</radiowidth>
