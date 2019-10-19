@@ -67,12 +67,13 @@ class Main(xbmcgui.WindowXML):
             sp.play()
         elif action.getId() == 12:
             sp.pause()
-        elif action.getId() == 14:
+        elif action.getId() == 3:
             sp.next()
-        elif action.getId() == 15:
+        elif action.getId() == 4:
             sp.previous()
         elif action.getId() == 92:
             self.close()
+        xbmc.log('logged action with ID: %d' % action.getId())
 
     def onClick(self, controlID):
         if controlID == 1101:
